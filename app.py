@@ -141,8 +141,17 @@ with st.sidebar:
     st.markdown("<h1 style='color: #60A5FA;'>🧬 PD System</h1>", unsafe_allow_html=True)
     st.markdown("---")
     st.subheader("📋 Patient Metadata")
-    p_name = st.text_input("Patient Full Name", "Aniket Sahgal")
-    p_age = st.number_input("Patient Age", 1, 120, 60)
+p_name = st.text_input(
+    "Patient Full Name",
+    placeholder="Enter patient's full name"
+)
+
+p_age = st.number_input(
+    "Patient Age",
+    min_value=1,
+    max_value=120
+)
+
     st.markdown("---")
     menu = st.radio("Navigation", [
         "🌟 Project Overview",
